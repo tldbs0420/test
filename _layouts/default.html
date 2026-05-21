@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="preconnect" href="https://img.shields.io">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+</head>
+<body>
+  <div class="background-orb background-orb-a"></div>
+  <div class="background-orb background-orb-b"></div>
+  <div class="site-noise"></div>
+
+  <header class="site-header">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="Eternal Mortis Home">
+      <span class="brand-mark"></span>
+      <span>Eternal Mortis</span>
+    </a>
+    <nav class="site-nav" aria-label="페이지 섹션">
+      <a href="#프로젝트-개요">프로젝트 개요</a>
+      <a href="#팀-소개">팀 소개</a>
+      <a href="#핵심-기술">핵심 기술</a>
+      <a href="#게임-요소">게임 요소</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <article class="content-card markdown-body">
+      {{ content }}
+    </article>
+  </main>
+</body>
+</html>

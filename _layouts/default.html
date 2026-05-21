@@ -8,35 +8,23 @@
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
 </head>
 <body>
-  <div class="site-chrome">
-    <div class="screen-frame"></div>
-    <div class="frame-corner corner-tl"></div>
-    <div class="frame-corner corner-tr"></div>
-    <div class="frame-corner corner-bl"></div>
-    <div class="frame-corner corner-br"></div>
+  <div class="fixed-frame" aria-hidden="true"></div>
+  <div class="embers" aria-hidden="true"></div>
 
-    <div class="site-shell">
-      <header class="hero-panel">
-        <div class="hero-overlay"></div>
-        <div class="hero-inner">
-          <div class="brand-row">
-            <a class="brand" href="{{ '/' | relative_url }}" aria-label="Eternal Mortis Home">Eternal Mortis</a>
-            <nav class="site-nav" aria-label="페이지 섹션">
-              <a href="#프로젝트-개요">프로젝트 개요</a>
-              <a href="#팀-소개">팀 소개</a>
-              <a href="#핵심-기술">핵심 기술</a>
-              <a href="#게임-요소">게임 요소</a>
-            </nav>
-          </div>
-        </div>
-      </header>
+  <header class="site-header">
+    <a class="brand" href="{{ '/' | relative_url }}">Eternal Mortis</a>
+    <nav class="site-nav" aria-label="페이지 섹션">
+      <a href="#프로젝트-개요">Overview</a>
+      <a href="#팀-소개">Team</a>
+      <a href="#핵심-기술">Tech</a>
+      <a href="#게임-요소">Game</a>
+    </nav>
+  </header>
 
-      <main class="page-wrap">
-        <article class="content-card markdown-body">
-          {{ content }}
-        </article>
-      </main>
-    </div>
-  </div>
+  <main class="site-main">
+    <article class="markdown-body">
+      {{ content }}
+    </article>
+  </main>
 </body>
 </html>

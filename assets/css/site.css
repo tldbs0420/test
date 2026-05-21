@@ -633,3 +633,40 @@ button.action-link {
     object-fit: contain !important;
   }
 }
+
+
+/* Final team photo frame: same white canvas, original photo centered */
+.team-photo-frame {
+  width: 100% !important;
+  height: 230px !important;
+  padding: 14px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #f4f0e7 !important;
+  border-bottom: 1px solid rgba(230, 165, 26, 0.42) !important;
+  overflow: hidden !important;
+}
+.team-photo-frame .team-photo,
+.team-card .team-photo {
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  display: block !important;
+  margin: 0 auto !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  clip-path: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+@media (max-width: 960px) {
+  .team-photo-frame { height: 240px !important; }
+}
+@media (max-width: 620px) {
+  .team-photo-frame { height: 260px !important; }
+}

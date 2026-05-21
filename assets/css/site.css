@@ -614,3 +614,22 @@ body::after,
 button.action-link {
   font-family: inherit;
 }
+
+/* Final team image fix: do not crop or enlarge member photos */
+.team-photo {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 260px !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  border-radius: 0 !important;
+  background: #000 !important;
+}
+
+@media (max-width: 860px) {
+  .team-photo {
+    height: auto !important;
+    max-height: 260px !important;
+    object-fit: contain !important;
+  }
+}

@@ -563,3 +563,54 @@ body::after,
   .team-grid { grid-template-columns: 1fr; }
   .team-photo { height: 260px !important; }
 }
+
+/* Embedded video section */
+.video-panel {
+  margin: 1.1rem 0 1.8rem;
+}
+.video-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid rgba(230, 165, 26, 0.58);
+  background: #000;
+  box-shadow:
+    inset 0 0 0 1px rgba(0,0,0,0.85),
+    inset 0 0 38px rgba(230, 165, 26, 0.04),
+    0 18px 46px rgba(0,0,0,0.55);
+  overflow: hidden;
+}
+.video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+.video-caption {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+  text-align: center;
+  font-size: 0.95rem;
+}
+.video-caption a {
+  margin-left: 0.35rem;
+}
+
+/* Disabled download button */
+.link-panel.is-disabled {
+  opacity: 0.92;
+}
+.action-link-disabled,
+.action-link-disabled:hover {
+  cursor: not-allowed;
+  opacity: 0.55;
+  color: var(--dim);
+  border-color: rgba(230, 165, 26, 0.28);
+  background: rgba(255,255,255,0.025);
+  text-shadow: none;
+}
+button.action-link {
+  font-family: inherit;
+}

@@ -5,31 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title | default: site.title }}</title>
   <meta name="description" content="{{ site.description }}">
-  <link rel="preconnect" href="https://img.shields.io">
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
 </head>
 <body>
-  <div class="background-orb background-orb-a"></div>
-  <div class="background-orb background-orb-b"></div>
-  <div class="site-noise"></div>
+  <div class="site-chrome">
+    <div class="screen-frame"></div>
+    <div class="frame-corner corner-tl"></div>
+    <div class="frame-corner corner-tr"></div>
+    <div class="frame-corner corner-bl"></div>
+    <div class="frame-corner corner-br"></div>
 
-  <header class="site-header">
-    <a class="brand" href="{{ '/' | relative_url }}" aria-label="Eternal Mortis Home">
-      <span class="brand-mark"></span>
-      <span>Eternal Mortis</span>
-    </a>
-    <nav class="site-nav" aria-label="페이지 섹션">
-      <a href="#프로젝트-개요">프로젝트 개요</a>
-      <a href="#팀-소개">팀 소개</a>
-      <a href="#핵심-기술">핵심 기술</a>
-      <a href="#게임-요소">게임 요소</a>
-    </nav>
-  </header>
+    <div class="site-shell">
+      <header class="hero-panel">
+        <div class="hero-overlay"></div>
+        <div class="hero-inner">
+          <div class="brand-row">
+            <a class="brand" href="{{ '/' | relative_url }}" aria-label="Eternal Mortis Home">Eternal Mortis</a>
+            <nav class="site-nav" aria-label="페이지 섹션">
+              <a href="#프로젝트-개요">프로젝트 개요</a>
+              <a href="#팀-소개">팀 소개</a>
+              <a href="#핵심-기술">핵심 기술</a>
+              <a href="#게임-요소">게임 요소</a>
+            </nav>
+          </div>
+        </div>
+      </header>
 
-  <main class="page">
-    <article class="content-card markdown-body">
-      {{ content }}
-    </article>
-  </main>
+      <main class="page-wrap">
+        <article class="content-card markdown-body">
+          {{ content }}
+        </article>
+      </main>
+    </div>
+  </div>
 </body>
 </html>

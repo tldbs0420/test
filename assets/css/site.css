@@ -670,3 +670,39 @@ button.action-link {
 @media (max-width: 620px) {
   .team-photo-frame { height: 260px !important; }
 }
+
+
+/* Motion/AI bottom GIF pair: place the last two GIFs side by side */
+.media-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin: 1rem 0 1.4rem;
+}
+.media-pair img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  margin: 0 !important;
+  border: 1px solid rgba(230, 165, 26, 0.34) !important;
+  background: #000 !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45) !important;
+}
+
+/* Strong team photo canvas fix: pure white square canvas */
+.team-photo-frame {
+  background: #ffffff !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(230, 165, 26, 0.42) !important;
+  padding: 16px !important;
+}
+.team-photo-frame .team-photo,
+.team-card .team-photo {
+  background: #ffffff !important;
+}
+
+@media (max-width: 700px) {
+  .media-pair {
+    grid-template-columns: 1fr;
+  }
+}
